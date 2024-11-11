@@ -1,0 +1,170 @@
+/* Cyberpunk-inspired CSS for a personal portfolio */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Dynamic neon gradient background */
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #39ff14; /* Bright neon green text color */
+    font-family: 'Orbitron', sans-serif; /* Modern cyberpunk font */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #121212, #1f1f1f);
+    box-shadow: 0 0 20px #39ff14;
+}
+
+h1, h2 {
+    color: #39ff14; /* Bright neon green for headers */
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #00ffcc;
+    animation: pulse 2s infinite; /* Added pulse effect */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #39ff14, 0 0 20px #00ffcc;
+    }
+    50% {
+        text-shadow: 0 0 20px #39ff14, 0 0 30px #00ffcc;
+    }
+}
+
+nav a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #39ff14;
+    transform: scale(1.1); /* Grow slightly on hover */
+}
+
+section {
+    padding: 20px;
+    border: 1px solid #39ff14;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px #39ff14;
+    animation: fade-in 2s ease-in-out; /* Smooth fade-in effect */
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    background-color: #121212;
+    color: #00ffcc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+button:hover {
+    box-shadow: 0 0 25px #39ff14;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    animation: fade-in-up 1.5s ease-in-out; /* Fade-in and move-up animation for each item */
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(45deg, #1f1f1f, #121212);
+    box-shadow: 0 0 10px #39ff14;
+    color: #39ff14;
+}
+
+/* Accordion Style without Checkboxes */
+details {
+    background-color: #1a1a1a;
+    border-left: 4px solid #39ff14;
+    padding: 15px;
+    transition: max-height 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+details[open] summary {
+    color: #39ff14;
+}
+
+details summary {
+    font-weight: bold;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+details summary:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+img {
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 15px #00ffcc;
+    margin: 20px 0;
+    max-width: 120px; /* Smaller size for the image */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%; /* Circular frame for the image */
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #39ff14;
+}
+
+form input, form textarea {
+    background-color: #1f1f1f;
+    color: #39ff14;
+    border: 2px solid #39ff14;
+    padding: 10px;
+    width: calc(100% - 24px);
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 10px #39ff14;
+    transition: box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #ff1493;
+    box-shadow: 0 0 20px #ff1493;
+}
